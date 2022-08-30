@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<script type="text/javascript">
+		function abc() 
+		{
+			var a=document.getElementById('amt').value;
+			var b=document.getElementById('mth').value;
+
+			a=+a;
+			b=+b;
+
+			var int=0.05;
+
+			var interest=a*int; //100*0.05=5
+
+			var repay=a+interest; //100+5=105
+
+			var emi=repay/b; //105/12
+
+			document.getElementById('y').innerHTML=emi;
+		}
+
+	</script>
+</head>
+<body>
+
+	Loan amount: <input type="text" name="" id="amt"><br>
+
+	Month:<select id="mth">
+		<option value="12">12</option>
+		<option value="24">24</option>
+		<option value="36">36</option>
+	</select>
+
+	<input type="button" name="" value="click me" onclick="abc()">
+
+	<h1 id="y"></h1>
+
+</body>
+</html>
